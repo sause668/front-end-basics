@@ -36,8 +36,8 @@ export default function Nav({mobile, mainDir, pageDirIndex}) {
         var elm = document.getElementById(mainDir.pageDir[pageDirIndex].TableDir[0].id);
         elm.scrollIntoView({behavior: "smooth"});   
         setAnchorNav(null);               
-    }, [dynamicRoute])
-
+    }, [dynamicRoute, mainDir, pageDirIndex])
+    
     return (
         <AppBar >
             {!mobile ? (
@@ -141,16 +141,17 @@ export default function Nav({mobile, mainDir, pageDirIndex}) {
                         FEB
                     </Typography>
                     {/* Page Directory */}
-                    {mainDir.pageDir.map((Page, index) => (
+                    {mainDir.pageDir.map((page, index) => (
                         <Button 
+                            key={`${page.id}pageNav`}
                             component={Link}
-                            href={`/${Page.id}`}
+                            href={`/${page.id}`}
                             variant={(index == pageDirIndex) ? 'outlined' : ''}
                             color="inherit" 
                             sx={{ mr: 5 }}
                         >
                             <Typography align='center' variant="h6">
-                                {Page.title}
+                                {page.title}
                             </Typography>
                         </Button>
                     ))}

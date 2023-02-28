@@ -6254,19 +6254,19 @@ export const mainDir = {
                                         head: ['Property', 'Description'],
                                         body: [
                                             [
-                                                (<b>border-top-left-radius</b>), 
+                                                (<><b>border-top-left-radius</b></>), 
                                                 `Defines the radius of the border of the top-left corner`
                                             ],
                                             [
-                                                (<b>border-top-right-radius</b>), 
+                                                (<><b>border-top-right-radius</b></>), 
                                                 `Defines the radius of the border of the top-right corner`
                                             ],
                                             [
-                                                (<b>border-bottom-right-radius</b>),
+                                                (<><b>border-bottom-right-radius</b></>),
                                                 `Defines the radius of the border of the bottom-right corner`
                                             ],
                                             [
-                                                (<b>border-bottom-left-radius</b>),
+                                                (<><b>border-bottom-left-radius</b></>),
                                                 `Defines the radius of the border of the bottom-left corner`
                                             ],
 

@@ -3287,8 +3287,8 @@ export const mainDir = {
                                             [
                                                 `sticky`, 
                                                 (<>
-                                                The element is positioned based on the user's scroll position<br/>
-                                                A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).<br/>
+                                                {"The element is positioned based on the user's scroll position"}<br/>
+                                                {'A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).'}<br/>
                                                 <b>Note: </b>Not supported in IE/Edge 15 or earlier. Supported in Safari from version 6.1 with a -webkit- prefix.
                                                 </>)
                                             ],
@@ -6881,7 +6881,7 @@ export const mainDir = {
                                                 <b>Possible values:</b><br/>
                                                 h-shadow - Required. Specifies a pixel value for the horizontal shadow. Negative values place the shadow to the left of the image.<br/><br/>
                                                 v-shadow - Required. Specifies a pixel value for the vertical shadow. Negative values place the shadow above the image.<br/><br/>
-                                                blur - Optional. This is the third value, and must be in pixels. Adds a blur effect to the shadow. A larger value will create more blur (the shadow becomes bigger and lighter). Negative values are not allowed. If no value is specified, 0 is used (the shadow's edge is sharp).<br/><br/>
+                                                {"blur - Optional. This is the third value, and must be in pixels. Adds a blur effect to the shadow. A larger value will create more blur (the shadow becomes bigger and lighter). Negative values are not allowed. If no value is specified, 0 is used (the shadow's edge is sharp)."}<br/><br/>
                                                 spread - Optional. This is the fourth value, and must be in pixels. Positive values will cause the shadow to expand and grow bigger, and negative values will cause the shadow to shrink. If not specified, it will be 0 (the shadow will be the same size as the element). <br/>
                                                 <b>Note: </b>Chrome, Safari and Opera, and maybe other browsers, do not support this 4th length; it will not render if added.<br/><br/>
                                                 color - Optional. Adds a color to the shadow. If not specified, the color depends on the browser (often black). An example of creating a red shadow, which is 8px big both horizontally and vertically, with a blur effect of 10px:<br/><br/>
@@ -14403,18 +14403,18 @@ export const mainDir = {
                                                 ` +`, 
                                                 `text3 = text1 + text2 `,
                                                 (<>
-                                                text1 = "Good "<br/>
-                                                text2 = "Morning"<br/>
-                                                text3 = "Good Morning"
+                                                {'text1 = "Good "'}<br/>
+                                                {'text2 = "Morning"'}<br/>
+                                                {'text3 = "Good Morning"'}
                                                 </>)
                                             ],
                                             [
                                                 ` +=`, 
                                                 `text1 += text2 `,
                                                 (<>
-                                                text1 = "Good Morning"<br/>
-                                                text2 = "Morning"<br/>
-                                                text3 = ""
+                                                {'text1 = "Good Morning"'}<br/>
+                                                {'text2 = "Morning"'}<br/>
+                                                {'text3 = ""'}
                                                 </>)
                                             ],
                                             
@@ -14446,7 +14446,7 @@ export const mainDir = {
                                                 `===`, 
                                                 `equal value and equal type`, 
                                                 (<>
-                                                x === "5" is false<br/>
+                                                {'x === "5" is false'}<br/>
                                                 x === 5 is true
                                                 </>),
                                             ],
@@ -14459,7 +14459,7 @@ export const mainDir = {
                                                 `!==`, 
                                                 `not equal value or not equal type`, 
                                                 (<>
-                                                x !== "5" is true<br/>
+                                                {'x !== "5" is true'}<br/>
                                                 x !== 5 is false
                                                 </>),
                                             ],
@@ -14935,7 +14935,7 @@ export const mainDir = {
                                                 Executed before the code block starts.<br/>
                                                 Normally used to initialize a counter variable.<br/>
                                                 To initiate multiple values, separate each value with a comma.<br/><br/>
-                                                This parameter can be omitted, but not the semicolon ";"
+                                                {'This parameter can be omitted, but not the semicolon ";"'}
                                                 </>)
                                             ],
                                             [
@@ -14944,7 +14944,7 @@ export const mainDir = {
                                                 Optional.<br/>
                                                 The condition for running the code block.<br/>
                                                 If it returns true the loop will start over again, otherwise the loop will end.<br/><br/>
-                                                This parameter can be omitted, but not the semicolon ";"
+                                                {'This parameter can be omitted, but not the semicolon ";"'}
                                                 </>)
                                             ],
                                             [
@@ -15734,7 +15734,7 @@ export const mainDir = {
                                             [
                                                 `A string`, 
                                                 (<>
-                                                If the user clicks "OK", the input value is returned.<br/>
+                                                {'If the user clicks "OK", the input value is returned.'}<br/>
                                                 Otherwise null is returned.         
                                                 </>)
                                             ],
@@ -17131,8 +17131,8 @@ export const mainDir = {
                                                 (<>
                                                 Required.<br/>
                                                 The event name.<br/>
-                                                Do not use the "on" prefix.<br/>
-                                                Use "click" instead of "onclick".
+                                                {'Do not use the "on" prefix.'}<br/>
+                                                {'Use "click" instead of "onclick".'}
                                                 </>)
                                             ],
                                             [
@@ -17140,7 +17140,7 @@ export const mainDir = {
                                                 (<>
                                                 Required.<br/>
                                                 The function to run when the event occurs. <br/>
-                                                When the event occurs, an event object is passed to the function as the first parameter. The type of the event object depends on the specified event. For example, the "click" event belongs to the MouseEvent object.
+                                                {'When the event occurs, an event object is passed to the function as the first parameter. The type of the event object depends on the specified event. For example, the "click" event belongs to the MouseEvent object.'}
                                                 </>)
                                             ],
                                             [

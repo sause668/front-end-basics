@@ -3,6 +3,7 @@ import HomeContentBlock from '@/components/HomeContentBlock'
 import HomeTitle from '@/components/HomeTitle'
 import Head from 'next/head'
 import { mainDir } from '@/lib/directories/mainDir'
+import Footer from '@/components/Footer'
 
 export default function Home() {
 
@@ -15,7 +16,7 @@ export default function Home() {
 
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <div style={{backgroundColor: '#2962ff', height: '200%'}}>
+      <div style={{backgroundColor: '#2962ff', height: '200%', pb: ''}}>
         <HomeTitle 
           title={'Front End Basics'} 
           dis={'A Collection of References to Help With Web Site creation for Beginners'} 
@@ -25,6 +26,7 @@ export default function Home() {
           <HomeContentBlock page={page} key={`${homeKey}${page.id}`} />
         ))}
         </HomeContent>
+        <Footer/>
       </div>
       
 

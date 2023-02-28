@@ -14,7 +14,8 @@ export default function CellList({cell, rowId}) {
                     primaryTypographyProps={{
                         variant: "body1",
                         lineHeight: 1.8,
-                        align: 'left'
+                        align: 'left',
+                        color: 'black'
                     }}   />
                 </ListItem>
             ))}

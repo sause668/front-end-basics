@@ -15250,7 +15250,7 @@ export const mainDir = {
             TableDir: [
                 {
                     id: 'windowObject',
-                    title: 'WindowObject',
+                    title: 'Window Object',
                     titleDir: [
                         {text: (<>&nbsp;</>)},
                         {text: `The window object represents an open window in a browser.`},
@@ -15280,7 +15280,7 @@ export const mainDir = {
                                 {text: `The location object is a property of the window object.`},
                                 {code: `let origin = window.location;`, indent: 0},
                                 {code: `let origin = location;`, indent: 0},
-                                {code: (<><b>Output: </b>{'ttps://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_loc_origin1'}</>), indent: 0},
+                                {code: (<><b>Output: </b>{'https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_loc_origin1'}</>), indent: 0},
                             ]
                         },
                         {
@@ -15998,7 +15998,7 @@ export const mainDir = {
                 },
                 {
                     id: 'historyObject',
-                    title: 'HistoryObject',
+                    title: 'History Object',
                     titleDir: [
                         {text: (<>&nbsp;</>)},
                         {text: `The history object contains the URLs visited by the user (in the browser window).`},
@@ -16053,7 +16053,7 @@ export const mainDir = {
                 },
                 {
                     id: 'locationObject',
-                    title: 'LocationObject',
+                    title: 'Location Object',
                     titleDir: [
                         {text: (<>&nbsp;</>)},
                         {text: `The location object contains information about the current URL.`},
@@ -16187,7 +16187,7 @@ export const mainDir = {
                 },
                 {
                     id: 'navigatorObject',
-                    title: 'NavigatorObject',
+                    title: 'Navigator Object',
                     titleDir: [
                         {text: `The navigator object contains information about the browser.`},
                         {text: `The navigator object is a property of the window object.`},
@@ -16301,7 +16301,7 @@ export const mainDir = {
                 },
                 {
                     id: 'screenObject',
-                    title: 'ScreenObject',
+                    title: 'Screen Object',
                     titleDir: [
                         //{text: (<>&nbsp;</>)},
                         {text: `The screen object contains information about the visitor's screen.`},
@@ -16410,7 +16410,7 @@ export const mainDir = {
                 },
                 {
                     id: 'consoleObject',
-                    title: 'ConsoleObject',
+                    title: 'Console Object',
                     titleDir: [
                         {text: `The console object provides access to the browser's debugging console.`},
                         {text: `The console object is a property of the window object.`},
@@ -16602,7 +16602,7 @@ export const mainDir = {
                 },
                 {
                     id: 'documentObject',
-                    title: 'DocumentObject',
+                    title: 'Document Object',
                     titleDir: [
                         {text: `When an HTML document is loaded into a web browser, it becomes a document object.`},
                         {text: `The document object is the root node of the HTML document.`},
@@ -17165,7 +17165,7 @@ export const mainDir = {
                 },
                 {
                     id: 'elementObject',
-                    title: 'ElementObject',
+                    title: 'Element Object',
                     titleDir: [
                         {text: `In the HTML DOM, the Element object represents an HTML element, like P, DIV, A, TABLE, or any other HTML element.`},
                     ],
@@ -18793,7 +18793,7 @@ export const mainDir = {
                 },
                 {
                     id: 'mouseEvent',
-                    title: 'MouseEvents',
+                    title: 'Mouse Events',
                     titleDir: [
                         {text: `Events that occur when the mouse interacts with the HTML document, belongs to the MouseEvent Object.`},
                     ],
@@ -19083,7 +19083,7 @@ export const mainDir = {
                 },
                 {
                     id: 'wheelEvent',
-                    title: 'WheelEvents',
+                    title: 'Wheel Events',
                     titleDir: [
                         {text: `Events that occur when the mouse wheel is scrolling, belongs to the WheelEvent Object.`},
                     ],
@@ -19156,7 +19156,7 @@ export const mainDir = {
                 },
                 {
                     id: 'dragEvent',
-                    title: 'DragEvents',
+                    title: 'Drag Events',
                     titleDir: [
                         {text: `Events that occur when elements are dragged and/or dropped, belongs to the DragEvent Object.`},
                     ],
@@ -19241,7 +19241,7 @@ export const mainDir = {
                 },
                 {
                     id: 'keyboardEvent',
-                    title: 'KeyboardEvents',
+                    title: 'Keyboard Events',
                     titleDir: [
                         {text: `Events that occur when user presses a key on the keyboard, belongs to the KeyboardEvent Object.`},
                     ],
@@ -19431,7 +19431,7 @@ export const mainDir = {
                 },
                 {
                     id: 'touchEvent', 
-                    title: 'TouchEvents',
+                    title: 'Touch Events',
                     titleDir: [
                         {text: `Events that occur when user touches a touch-based device, belongs to the TouchEvent Object.`},
                     ],
@@ -19539,7 +19539,7 @@ export const mainDir = {
                 
                 {
                     id: 'animationEvent',
-                    title: 'AnimationEvents',
+                    title: 'Animation Events',
                     titleDir: [
                         {text: `Events that occur when a CSS animation runs, belongs to the AnimationEvent Object.`},
                     ],
@@ -19610,7 +19610,7 @@ export const mainDir = {
                 },
                 {
                     id: 'transitionEvent',
-                    title: 'TransitionEvents',
+                    title: 'Transition Events',
                     titleDir: [
                         {text: `Events that occur when a CSS transition runs, belongs to the TransitionEvent Object.`},
                     ],
@@ -19649,7 +19649,7 @@ export const mainDir = {
                 },
                 {
                     id: 'inputEvent',
-                    title: 'InputEvents',
+                    title: 'Input Events',
                     titleDir: [
                         {text: `Events that occur when an form element's content changes, belongs to the InputEvent Object.`},
                     ],
@@ -19718,7 +19718,7 @@ export const mainDir = {
                 },
                 {
                     id: 'uiEvent',
-                    title: 'UiEvents',
+                    title: 'UI Events',
                     titleDir: [
                         {text: `Events that are triggered from the user interface belongs to the UiEvent Object.`},
                     ],
@@ -19816,7 +19816,7 @@ export const mainDir = {
                 },
                 {
                     id: 'pageTransitionEvent',
-                    title: 'PageTransitionEvents',
+                    title: 'Page Transition Events',
                     titleDir: [
                         {text: `Events that occur when user navigates to, and away from, a webpage.`},
                     ],
@@ -19859,7 +19859,7 @@ export const mainDir = {
                 },
                 {
                     id: 'progressEvent',
-                    title: 'ProgressEvents',
+                    title: 'Progress Events',
                     titleDir: [
                         {text: `Events that occur when loading external resources, belongs to the ProgressEvent Object.`},
                     ],
@@ -19908,7 +19908,7 @@ export const mainDir = {
                 },
                 {
                     id: 'storageEvent',
-                    title: 'StorageEvents',
+                    title: 'Storage Events',
                     titleDir: [
                         {text: `Events that occur when there is changes in the window's storage area.`},
                     ],
@@ -19966,7 +19966,7 @@ export const mainDir = {
                 },
                 {
                     id: 'popStateEvent',
-                    title: 'PopStateEvents',
+                    title: 'Pop State Events',
                     titleDir: [
                         {text: `Events that occur when the window's history changes.`},
                     ],
@@ -19994,7 +19994,7 @@ export const mainDir = {
                 },
                 {
                     id: 'hashChangeEvent',
-                    title: 'hashChangeEvents',
+                    title: 'Hash Change Events',
                     titleDir: [
                         {text: `Events that occur when the anchor part of the URL changes, belongs to the HashChangeEvent Object.`},
                     ],
@@ -20038,7 +20038,7 @@ export const mainDir = {
                 },
                 {
                     id: 'focusEvent',
-                    title: 'FocusEvents',
+                    title: 'Focus Events',
                     titleDir: [
                         {text: `Events that occur when elements gets or loses focus, belongs to the FocusEvent Object.`},
                     ],
@@ -20101,7 +20101,7 @@ export const mainDir = {
                 },
                 {
                     id: 'clipboardEvent',
-                    title: 'ClipboardEvents',
+                    title: 'Clipboard Events',
                     titleDir: [
                         {text: `Events that occur when the clipboard is modified, belongs to the ClipboardEvent Object.`},
                     ],

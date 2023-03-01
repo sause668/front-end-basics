@@ -4,7 +4,6 @@ import RowContent from "./RowContent";
 import CellContent from "./CellContent";
 
 
-
 export default function TableContent({table, pageId}) {
     return (
         <div key={`${pageId}${table.id}`} id={table.id} >

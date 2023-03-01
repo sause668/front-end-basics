@@ -857,7 +857,7 @@ export const mainDir = {
                             title: '<output>', 
                             cellDir: [
                                 {text: `Used to represent the result of a calculation (like one performed by a script).`},
-                                {code: `<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">`, indent: 0},
+                                {code: `<form oninput="x.value = parseInt(a.value) + parseInt(b.value)">`, indent: 0},
                                 {code: `<input type="range" id="a" value="50">`, indent: 1},
                                 {code: `<input type="number" id="b" value="25">`, indent: 1},
                                 {code: `<output name="x" for="a b"></output>`, indent: 1},
@@ -12003,15 +12003,6 @@ export const mainDir = {
                         
                     ] 
                 },
-                // {
-                //     id: 'map',
-                //     title: 'Map',
-                //     titleDir: [],
-                //     RowDir: [
-                //         {id: '', title: '', cellDir: []},
-                //         {id: '', title: '', cellDir: []},
-                //     ] 
-                // },
                 {
                     id: 'Strings',
                     title: 'Strings',

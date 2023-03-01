@@ -2,7 +2,6 @@ import { Box, Container, } from "@mui/material";
 import TableContent from "./table-comps/TableContent";
 
 
-
 export default function PageContent({page}) {
     return (
         <Box  sx={{

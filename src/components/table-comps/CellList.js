@@ -5,7 +5,7 @@ export default function CellList({cell, rowId}) {
     return (
         <List sx={{mt: 0, pt: 0}} >
             {cell.list.map((item,index) => (
-                <ListItem sx={{py: 0}} key={`${rowId}${index}`} >
+                <ListItem sx={{py: 0}} key={`${rowId}${index}list`} >
                     <ListItemIcon>
                         <CircleIcon fontSize="small" color="primary"/>
                     </ListItemIcon>

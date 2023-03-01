@@ -3,9 +3,6 @@ import NavDir from "./NavDir";
 
 
 export default function PageNav({mobile, page}) {
-    
-
-
     return (
         <>
             {!mobile ? (<></>) : (

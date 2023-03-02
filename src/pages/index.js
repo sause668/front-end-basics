@@ -13,8 +13,7 @@ export default function Home() {
     <>
       <Head>
         <title>Front End Basics</title>
-
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        {/* <meta name="viewport" content="initial-scale=1, width=device-width" /> */}
       </Head>
       <div style={{backgroundColor: '#2962ff', height: '200%', pb: ''}}>
         <HomeTitle 

@@ -5,6 +5,7 @@ import { mainDir } from '@/lib/directories/mainDir';
 import { useMediaQuery } from '@mui/material';
 import { getAllDirIds } from '@/lib/directoryFunctions';
 import { getDir } from '@/lib/directoryFunctions';
+import Head from 'next/head'
 
 
 
@@ -31,6 +32,10 @@ export default function Table({pageDirIndex}) {
 
     return (
         <div style={{backgroundColor: '', height: '100%', width: '100%', position:'absolute', zIndex:-1, display: 'flex'}}>
+            <Head>
+            <title>{mainDir.pageDir[pageDirIndex].title}</title>
+            <meta name="viewport" content="initial-scale=1, width=device-width" />
+            </Head>
             <Nav mobile={mobile} mainDir={mainDir} pageDirIndex={pageDirIndex}/>
             <PageNav mobile={mobile} page={mainDir.pageDir[pageDirIndex]}/>
             <PageContent mobile={mobile} page={mainDir.pageDir[pageDirIndex]}/>

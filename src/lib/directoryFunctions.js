@@ -27,12 +27,12 @@ export function getDir(id) {
             return 3;
             break;
 
-        case 'jsHtmlCss':
+        case 'advJavaScript':
             return 4;
             break;
                                    
         default:
-            return 1;
+            return 0;
             break;
     }
 }

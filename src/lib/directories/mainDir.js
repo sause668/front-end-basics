@@ -20352,6 +20352,115 @@ export const mainDir = {
                             ],
                         }
                     ]
+                },
+                {
+                    id: 'metaProgramming',
+                    title: 'Meta programming',
+                    titleDir: [
+                        {text: `The Proxy and Reflect objects allow you to intercept and define custom behavior for fundamental language operations (e.g., property lookup, assignment, enumeration, function invocation, etc.). With the help of these two objects you are able to program at the meta level of JavaScript.`},
+                    ],
+                    RowDir: [
+                        {
+                            id: 'proxies', 
+                            title: 'Proxies', 
+                            cellDir: [
+                                {text: `Proxy objects allow you to intercept certain operations and to implement custom behaviors.`},
+                                {text: `For example, getting a property on an object:`},
+                                {code: `const handler = {`, indent: 0},
+                                {code: `get(target, name) {`, indent: 1},
+                                {code: `return name in target ? target[name] : 42;`, indent: 2},
+                                {code: `},`, indent: 1},
+                                {code: `};`, indent: 0},
+                                {code: `const p = new Proxy({}, handler);`, indent: 0},
+                                {code: `p.a = 1;`, indent: 0},
+                                {code: `console.log(p.a, p.b); // 1, 42`, indent: 0},
+                                {text: `The Proxy object defines a target (an empty object here) and a handler object, in which a get trap is implemented. Here, an object that is proxied will not return undefined when getting undefined properties, but will instead return the number 42.`},
+                                {text: `Additional examples are available on the Proxy reference page.`},
+                                {text: (<><b>{'Terminology'}</b></>)},
+                                {text: `The following terms are used when talking about the functionality of proxies.`},
+                                {text: `handler`},
+                                {text: `Placeholder object which contains traps.`},
+                                {text: `traps`},
+                                {text: `The methods that provide property access. (This is analogous to the concept of traps in operating systems.)`},
+                                {text: `target`},
+                                {text: `Object which the proxy virtualizes. It is often used as storage backend for the proxy. Invariants (semantics that remain unchanged) regarding object non-extensibility or non-configurable properties are verified against the target.`},
+                                {text: `invariants`},
+                                {text: `Semantics that remain unchanged when implementing custom operations are called invariants. If you violate the invariants of a handler, a TypeError will be thrown.`},
+                            ]
+                        },
+                        {
+                            id: 'handlersAndTraps', 
+                            title: 'Handlers and Traps', 
+                            cellDir: [
+                                {text: `The following table summarizes the available traps available to Proxy objects. See the reference pages for detailed explanations and examples.`},
+                                {table: {
+                                    head: ['Handler /Trap', 'Interceptions'],
+                                    body: [
+                                        ['handler.getPrototypeOf()', 'Object.getPrototypeOf(), Reflect.getPrototypeOf(), __proto__, Object.prototype.isPrototypeOf(), instanceof'],
+                                        ['handler.setPrototypeOf()', 'Object.setPrototypeOf(), Reflect.setPrototypeOf()'],
+                                        ['handler.isExtensible()', 'Object.isExtensible(), Reflect.isExtensible()'],
+                                        ['handler.preventExtensions()', 'Object.preventExtensions(), Reflect.preventExtensions()'],
+                                        ['handler.getOwnPropertyDescriptor()', 'Object.getOwnPropertyDescriptor(), Reflect.getOwnPropertyDescriptor()'],
+                                        ['handler.defineProperty()', 'Object.defineProperty(), Reflect.defineProperty()'],
+                                        ['handler.has()', 'Property query: foo in proxy, Inherited property query: foo in Object.create(proxy), Reflect.has()'],
+                                        ['handler.get()', 'Property access: proxy[foo], proxy.bar, Inherited property access: Object.create(proxy)[foo], Reflect.get()'],
+                                        ['handler.set()', 'Property assignment: proxy[foo] = bar, proxy.foo = bar, Inherited property assignment: Object.create(proxy)[foo] = bar, Reflect.set()'],
+                                        ['handler.deleteProperty()', 'Property deletion: delete proxy[foo], delete proxy.foo, Reflect.deleteProperty()'],
+                                        ['handler.ownKeys()', 'Object.getOwnPropertyNames(), Object.getOwnPropertySymbols(), Object.keys(), Reflect.ownKeys()'],
+                                        ['handler.apply()', 'proxy(..args), Function.prototype.apply() and Function.prototype.call(), Reflect.apply()'],
+                                        ['handler.construct()', 'new proxy(...args), Reflect.construct()'],
+                                    ]
+                                }},
+                            ]
+                        },
+                        {
+                            id: 'revocableProxy', 
+                            title: 'Revocable Proxy', 
+                            cellDir: [
+                                {text: `The Proxy.revocable() method is used to create a revocable Proxy object. This means that the proxy can be revoked via the function revoke and switches the proxy off.`},
+                                {text: `Afterwards, any operation on the proxy leads to a TypeError.`},
+                                {code: `const revocable = Proxy.revocable(`, indent: 0},
+                                {code: `{},`, indent: 1},
+                                {code: `{`, indent: 1},
+                                {code: `get(target, name) {`, indent: 2},
+                                {code: `return '[[${'name'}]]';`, indent: 3},
+                                {code: `},`, indent: 2},
+                                {code: `},`, indent: 1},
+                                {code: `);`, indent: 0},
+                                {code: `const proxy = revocable.proxy;`, indent: 0},
+                                {code: `console.log(proxy.foo); // "[[foo]]"`, indent: 0},
+                                {code: `revocable.revoke();`, indent: 0},
+                                {code: `console.log(proxy.foo); // TypeError: Cannot perform 'get' on a proxy that has been revoked`, indent: 0},
+                                {code: `proxy.foo = 1; // TypeError: Cannot perform 'set' on a proxy that has been revoked`, indent: 0},
+                                {code: `delete proxy.foo; // TypeError: Cannot perform 'deleteProperty' on a proxy that has been revoked`, indent: 0},
+                                {code: `console.log(typeof proxy); // "object", typeof doesn't trigger any trap`, indent: 0},
+                            ]
+                        },
+                        {
+                            id: 'reflection', 
+                            title: 'Reflection', 
+                            cellDir: [
+                                {text: `Reflect is a built-in object that provides methods for interceptable JavaScript operations. The methods are the same as those of the proxy handler's.`},    
+                                {text: `Reflect is not a function object.`},
+                                {text: `Reflect helps with forwarding default operations from the handler to the target.`},
+                                {text: `With Reflect.has() for example, you get the in operator as a function:`},
+                                {code: `Reflect.has(Object, "assign"); // true`, indent: 0},
+                                {text: `A better apply() function`},
+                                {text: `Before Reflect, you typically use the Function.prototype.apply() method to call a function with a given this value and arguments provided as an array (or an array-like object).`},
+                                {code: `Function.prototype.apply.call(Math.floor, undefined, [1.75]);`, indent: 0},
+                                {text: `With Reflect.apply this becomes less verbose and easier to understand:`},
+                                {code: `Reflect.apply(Math.floor, undefined, [1.75]);`, indent: 0},
+                                {code: `// 1`, indent: 0},
+                                {text: `Checking if property definition has been successful`},
+                                {text: `With Object.defineProperty, which returns an object if successful, or throws a TypeError otherwise, you would use a try...catch block to catch any error that occurred while defining a property. Because Reflect.defineProperty() returns a Boolean success status, you can just use an if...else block here:`},
+                                {code: `if (Reflect.defineProperty(target, property, attributes)) {`, indent: 0},
+                                {code: `// success`, indent: 1},
+                                {code: `} else {`, indent: 1},
+                                {code: `// failure`, indent: 1},
+                                {code: `}`, indent: 0},
+                            ]
+                        },
+                    ]
                 }
             ]
         }
